@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Speech to Text Notes"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"/>
+
+    <!-- Speech Button -->
+    <Button
+        android:id="@+id/btnRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Recording"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/teal_700"
+        android:layout_below="@id/title"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"/>
+
+    <!-- Editable Text Input -->
+    <EditText
+        android:id="@+id/etTypedNotes"
+        android:layout_width="391dp"
+        android:layout_height="104dp"
+        android:layout_below="@id/btnRecord"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_edittext"
+        android:hint="Type your notes here..."
+        android:padding="10dp"
+        android:textColor="@color/black" />
+
+    <!-- Note Display -->
+    <EditText
+        android:id="@+id/etNotes"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:hint="Your transcribed notes will appear here..."
+        android:layout_below="@id/etTypedNotes"
+        android:layout_marginTop="16dp"
+        android:gravity="top"
+        android:background="@drawable/rounded_edittext"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:focusable="false"/>
+
+    <!-- Keyword Input -->
+    <EditText
+        android:id="@+id/etKeyword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter keyword to highlight"
+        android:layout_below="@id/etNotes"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_edittext"
+        android:padding="10dp"
+        android:textColor="@color/black"/>
+
+    <!-- Highlight Button -->
+    <Button
+        android:id="@+id/btnHighlight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Highlight Keyword"
+        android:layout_below="@id/etKeyword"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/teal_700"/>
+
+    <!-- Text to Speech Button -->
+    <Button
+        android:id="@+id/btnSpeak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Read Notes"
+        android:layout_below="@id/btnHighlight"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/teal_700"/>
+
+</RelativeLayout>
